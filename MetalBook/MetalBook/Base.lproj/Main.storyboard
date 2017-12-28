@@ -19,42 +19,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlH-ft-AHz">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlH-ft-AHz" userLabel="NavigationView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="40"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-Co-NSf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-Co-NSf" userLabel="NaviStack">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVH-1i-5gS">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="44"/>
-                                                <state key="normal" title="Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVH-1i-5gS" userLabel="HomeButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="40"/>
+                                                <state key="normal" title="Home">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZv-N7-3R7">
-                                                <rect key="frame" x="95.666666666666686" y="0.0" width="88" height="44"/>
-                                                <state key="normal" title="Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZv-N7-3R7" userLabel="MessageButton">
+                                                <rect key="frame" x="95.666666666666686" y="0.0" width="88" height="40"/>
+                                                <state key="normal" title="Messages">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf5-yE-wee">
-                                                <rect key="frame" x="191.66666666666666" y="0.0" width="87.666666666666657" height="44"/>
-                                                <state key="normal" title="Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf5-yE-wee" userLabel="NotifierButton">
+                                                <rect key="frame" x="191.66666666666666" y="0.0" width="87.666666666666657" height="40"/>
+                                                <state key="normal" title="Notifications">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFV-Im-9Zh">
-                                                <rect key="frame" x="287.33333333333331" y="0.0" width="87.666666666666686" height="44"/>
-                                                <state key="normal" title="Button">
+                                                <rect key="frame" x="287.33333333333331" y="0.0" width="87.666666666666686" height="40"/>
+                                                <state key="normal" title="About">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.11086700635902592" green="0.32332340000848325" blue="0.71739394430051817" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="KJj-bG-Y8m"/>
+                                    <constraint firstAttribute="height" constant="40" id="KJj-bG-Y8m"/>
                                     <constraint firstItem="n8A-Co-NSf" firstAttribute="top" secondItem="xlH-ft-AHz" secondAttribute="top" id="dbj-l3-PKJ"/>
                                     <constraint firstAttribute="trailing" secondItem="n8A-Co-NSf" secondAttribute="trailing" id="n6l-t2-xwA"/>
                                     <constraint firstItem="n8A-Co-NSf" firstAttribute="height" secondItem="xlH-ft-AHz" secondAttribute="height" id="nO7-nW-tal"/>
@@ -62,20 +62,22 @@
                                     <constraint firstItem="n8A-Co-NSf" firstAttribute="width" secondItem="xlH-ft-AHz" secondAttribute="width" id="tpI-gr-KX9"/>
                                 </constraints>
                             </view>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLy-8c-02m">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLy-8c-02m" userLabel="WebView">
+                                <rect key="frame" x="0.0" y="84" width="375" height="694"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
+                                <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="MetalBook">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GLy-8c-02m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MOI-Bu-MsF"/>
                             <constraint firstItem="xlH-ft-AHz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PaX-3o-BYj"/>
                             <constraint firstItem="xlH-ft-AHz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VWK-38-U8U"/>
+                            <constraint firstItem="GLy-8c-02m" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="WdZ-h3-2ZA"/>
                             <constraint firstItem="GLy-8c-02m" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aEh-w2-JXR"/>
                             <constraint firstItem="GLy-8c-02m" firstAttribute="top" secondItem="xlH-ft-AHz" secondAttribute="bottom" id="mtD-7w-I5X"/>
                             <constraint firstItem="GLy-8c-02m" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qJw-t6-xvC"/>
