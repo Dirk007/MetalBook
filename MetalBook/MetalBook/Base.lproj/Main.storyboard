@@ -146,7 +146,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnC-I1-w0p">
-                                <rect key="frame" x="16" y="44" width="343" height="662"/>
+                                <rect key="frame" x="16" y="88" width="343" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">MetalBook is free software. The author has nothing to do or has any association with the encapsulated website which is simply wrapped inside this app.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -160,18 +160,43 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="To4-MO-v8U"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WLk-RT-M6r">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="About MetalBook" id="6be-xw-PHq">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="done" id="VPv-9X-owp">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="wx6-07-FQg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="AVk-Ir-QeG" firstAttribute="bottom" secondItem="to5-Mi-3n8" secondAttribute="bottom" id="2WT-pK-sIE"/>
                             <constraint firstItem="AVk-Ir-QeG" firstAttribute="centerX" secondItem="to5-Mi-3n8" secondAttribute="centerX" id="71S-h3-5JO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="to5-Mi-3n8"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qDd-KH-NBQ" appends="YES" id="wDb-r3-cxg"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3m-TG-P9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="qDd-KH-NBQ">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="VIM-Is-gkl"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1074" y="133"/>
+            <point key="canvasLocation" x="1072.8" y="132.26600985221674"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wx6-07-FQg"/>
+    </inferredMetricsTieBreakers>
 </document>
