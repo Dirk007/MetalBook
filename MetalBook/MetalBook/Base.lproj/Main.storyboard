@@ -11,40 +11,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MetalBookMainViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MetalBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MetalBookMainViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MetalBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlH-ft-AHz" userLabel="NavigationView">
-                                <rect key="frame" x="0.0" y="44" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="25"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-Co-NSf" userLabel="NaviStack">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVH-1i-5gS" userLabel="HomeButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="25"/>
                                                 <state key="normal" title="Home">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="homeTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="S4d-Mf-Jvh"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZv-N7-3R7" userLabel="MessageButton">
-                                                <rect key="frame" x="95.666666666666686" y="0.0" width="88" height="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZv-N7-3R7" userLabel="NewestButton">
+                                                <rect key="frame" x="95.666666666666686" y="0.0" width="88" height="25"/>
+                                                <state key="normal" title="Newest">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="newestTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="abd-r5-o5T"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf5-yE-wee" userLabel="MessagesButton">
+                                                <rect key="frame" x="191.66666666666666" y="0.0" width="87.666666666666657" height="25"/>
                                                 <state key="normal" title="Messages">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf5-yE-wee" userLabel="NotifierButton">
-                                                <rect key="frame" x="191.66666666666666" y="0.0" width="87.666666666666657" height="40"/>
-                                                <state key="normal" title="Notifications">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <connections>
+                                                    <action selector="messagesTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="MI0-q9-Wga"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFV-Im-9Zh">
-                                                <rect key="frame" x="287.33333333333331" y="0.0" width="87.666666666666686" height="40"/>
+                                                <rect key="frame" x="287.33333333333331" y="0.0" width="87.666666666666686" height="25"/>
                                                 <state key="normal" title="About">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -54,7 +63,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="KJj-bG-Y8m"/>
+                                    <constraint firstAttribute="height" constant="25" id="KJj-bG-Y8m"/>
                                     <constraint firstItem="n8A-Co-NSf" firstAttribute="top" secondItem="xlH-ft-AHz" secondAttribute="top" id="dbj-l3-PKJ"/>
                                     <constraint firstAttribute="trailing" secondItem="n8A-Co-NSf" secondAttribute="trailing" id="n6l-t2-xwA"/>
                                     <constraint firstItem="n8A-Co-NSf" firstAttribute="height" secondItem="xlH-ft-AHz" secondAttribute="height" id="nO7-nW-tal"/>
@@ -63,7 +72,7 @@
                                 </constraints>
                             </view>
                             <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLy-8c-02m" userLabel="WebView">
-                                <rect key="frame" x="0.0" y="84" width="375" height="694"/>
+                                <rect key="frame" x="0.0" y="69" width="375" height="709"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="MetalBook">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -86,6 +95,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="Xxn-A4-158"/>
                         <outlet property="webkitView" destination="GLy-8c-02m" id="hEq-Qx-EUG"/>
                     </connections>
                 </viewController>
