@@ -14,25 +14,53 @@ class ViewController: UIViewController {
     @IBOutlet var webLoadProgress: UIProgressView!
     @IBOutlet var mainView: UIView!
     @IBOutlet var webkitView: WKWebView!
+    @IBOutlet var homeButton: UIButton!
+    @IBOutlet var newestButton: UIButton!
+    @IBOutlet var messagesButton: UIButton!
 
-    var lastLoaded : String = ""
+    enum ButtonAction {
+        case home, newest, messages
+    }
     
+    struct ButtonContext {
+        var url: String
+        var button: UIButton
+    }
+    
+    var ActionDict : [ButtonAction: ButtonContext] = [:]
+        
+    var lastLoaded : String = ""
+
+    func initWebButtons()
+    {
+        ActionDict = [ButtonAction.home: ButtonContext(url: "https://www.facebook.com/?sk=h_nor", button: homeButton),
+                      ButtonAction.newest: ButtonContext(url: "https://www.facebook.com/?sk=h_chr", button: newestButton),
+                      ButtonAction.messages: ButtonContext(url: "https://www.facebook.com/messages", button: messagesButton)]
+        
+    }
+    
+    func performWebButton(button: ButtonAction) {
+        loadPage(url: (ActionDict[button]?.url)!)
+        for (action, context) in ActionDict {
+            context.button.isSelected = (action == button)
+        }
+    }
+
     @IBAction func homeTapped(_ sender: Any)
     {
-        loadPage(url: "https://www.facebook.com/?sk=h_nor")
+        performWebButton(button: ButtonAction.home)
     }
     
     @IBAction func newestTapped(_ sender: Any) {
-        loadPage(url: "https://www.facebook.com/?sk=h_chr")
+        performWebButton(button: ButtonAction.newest)
     }
     
     @IBAction func messagesTapped(_ sender: Any) {
-        loadPage(url: "https://www.facebook.com/messages")
+        performWebButton(button: ButtonAction.messages)
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         if (motion == .motionShake) {
-            print("!!!!! SHAKE !!!!!");
             if (!lastLoaded.isEmpty) {
                 loadPage(url: lastLoaded)
             }
@@ -49,12 +77,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         webkitView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-        loadPage(url: "https://www.facebook.com/")
+        
+        initWebButtons()
+        performWebButton(button: ButtonAction.home)
+        
+        //loadPage(url: "https://www.facebook.com/")
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
-            print("** PROGRESS: \(webkitView.estimatedProgress )")
             webLoadProgress.progress = Float(webkitView.estimatedProgress)
             webLoadProgress.isHidden = (webkitView.estimatedProgress == 1.0)
         }
