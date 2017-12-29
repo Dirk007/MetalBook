@@ -22,6 +22,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlH-ft-AHz" userLabel="NavigationView">
                                 <rect key="frame" x="0.0" y="44" width="375" height="25"/>
                                 <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="v7q-ZL-reD">
+                                        <rect key="frame" x="0.0" y="23" width="375" height="2"/>
+                                    </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-Co-NSf" userLabel="NaviStack">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
                                         <subviews>
@@ -65,6 +68,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="KJj-bG-Y8m"/>
                                     <constraint firstItem="n8A-Co-NSf" firstAttribute="top" secondItem="xlH-ft-AHz" secondAttribute="top" id="dbj-l3-PKJ"/>
+                                    <constraint firstItem="v7q-ZL-reD" firstAttribute="top" secondItem="xlH-ft-AHz" secondAttribute="bottom" constant="-2" id="izS-iC-C5Z"/>
                                     <constraint firstAttribute="trailing" secondItem="n8A-Co-NSf" secondAttribute="trailing" id="n6l-t2-xwA"/>
                                     <constraint firstItem="n8A-Co-NSf" firstAttribute="height" secondItem="xlH-ft-AHz" secondAttribute="height" id="nO7-nW-tal"/>
                                     <constraint firstItem="n8A-Co-NSf" firstAttribute="leading" secondItem="xlH-ft-AHz" secondAttribute="leading" id="o2h-cg-lLX"/>
@@ -85,6 +89,7 @@
                         <constraints>
                             <constraint firstItem="GLy-8c-02m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MOI-Bu-MsF"/>
                             <constraint firstItem="xlH-ft-AHz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PaX-3o-BYj"/>
+                            <constraint firstItem="v7q-ZL-reD" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="TBq-2e-mnb"/>
                             <constraint firstItem="xlH-ft-AHz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VWK-38-U8U"/>
                             <constraint firstItem="GLy-8c-02m" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="WdZ-h3-2ZA"/>
                             <constraint firstItem="GLy-8c-02m" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aEh-w2-JXR"/>
