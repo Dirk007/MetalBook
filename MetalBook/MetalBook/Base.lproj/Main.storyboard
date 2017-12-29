@@ -27,11 +27,11 @@
                                         <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-Co-NSf" userLabel="NaviStack">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-Co-NSf" userLabel="NaviStack">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVH-1i-5gS" userLabel="HomeButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="25"/>
                                                 <state key="normal" title="Home">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -40,7 +40,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZv-N7-3R7" userLabel="NewestButton">
-                                                <rect key="frame" x="95.666666666666686" y="0.0" width="88" height="25"/>
+                                                <rect key="frame" x="83" y="0.0" width="95" height="25"/>
                                                 <state key="normal" title="Newest">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -49,7 +49,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf5-yE-wee" userLabel="MessagesButton">
-                                                <rect key="frame" x="191.66666666666666" y="0.0" width="87.666666666666657" height="25"/>
+                                                <rect key="frame" x="186" y="0.0" width="128.33333333333337" height="25"/>
                                                 <state key="normal" title="Messages">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -58,7 +58,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFV-Im-9Zh">
-                                                <rect key="frame" x="287.33333333333331" y="0.0" width="87.666666666666686" height="25"/>
+                                                <rect key="frame" x="322.33333333333331" y="0.0" width="52.666666666666686" height="25"/>
                                                 <state key="normal" title="About">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
