@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet var mainView: UIView!
     @IBOutlet var webkitView: WKWebView!
 
+    var lastLoaded : String = ""
+    
     @IBAction func homeTapped(_ sender: Any)
     {
         loadPage(url: "https://www.facebook.com/?sk=h_nor")
@@ -31,10 +33,13 @@ class ViewController: UIViewController {
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         if (motion == .motionShake) {
             print("!!!!! SHAKE !!!!!");
-            self.homeTapped(self)
+            if (!lastLoaded.isEmpty) {
+                loadPage(url: lastLoaded)
+            }
         }
     }
     func loadPage(url: String) {
+        lastLoaded = url
         let myRequest = URLRequest(url: URL(string: url)!)
         webkitView.stopLoading()
         webkitView.load(myRequest)
@@ -43,7 +48,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         webkitView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         loadPage(url: "https://www.facebook.com/")
     }
@@ -59,6 +63,7 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        lastLoaded.removeAll()
     }
 
 
