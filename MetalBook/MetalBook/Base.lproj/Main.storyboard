@@ -24,6 +24,8 @@
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="v7q-ZL-reD">
                                         <rect key="frame" x="0.0" y="23" width="375" height="2"/>
+                                        <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="n8A-Co-NSf" userLabel="NaviStack">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
@@ -101,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="Xxn-A4-158"/>
+                        <outlet property="webLoadProgress" destination="v7q-ZL-reD" id="hlB-E0-7hs"/>
                         <outlet property="webkitView" destination="GLy-8c-02m" id="hEq-Qx-EUG"/>
                     </connections>
                 </viewController>

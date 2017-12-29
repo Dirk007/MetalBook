@@ -11,6 +11,7 @@ import WebKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var webLoadProgress: UIProgressView!
     @IBOutlet var mainView: UIView!
     @IBOutlet var webkitView: WKWebView!
 
@@ -27,6 +28,12 @@ class ViewController: UIViewController {
         loadPage(url: "https://www.facebook.com/messages")
     }
     
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if (motion == .motionShake) {
+            print("!!!!! SHAKE !!!!!");
+            self.homeTapped(self)
+        }
+    }
     func loadPage(url: String) {
         let myRequest = URLRequest(url: URL(string: url)!)
         webkitView.stopLoading()
@@ -36,9 +43,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        webkitView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         loadPage(url: "https://www.facebook.com/")
     }
 
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            print("** PROGRESS: \(webkitView.estimatedProgress )")
+            webLoadProgress.progress = Float(webkitView.estimatedProgress)
+            webLoadProgress.isHidden = (webkitView.estimatedProgress == 1.0)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
